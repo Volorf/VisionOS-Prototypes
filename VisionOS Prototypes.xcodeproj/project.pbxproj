@@ -7,14 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E40D42372B49F01000962073 /* Finder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40D42362B49F01000962073 /* Finder.swift */; };
 		E4E32A1B2B48C3E800E1583A /* RealityKitContent in Frameworks */ = {isa = PBXBuildFile; productRef = E4E32A1A2B48C3E800E1583A /* RealityKitContent */; };
 		E4E32A1D2B48C3E800E1583A /* VisionOS_PrototypesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E32A1C2B48C3E800E1583A /* VisionOS_PrototypesApp.swift */; };
 		E4E32A1F2B48C3E800E1583A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E32A1E2B48C3E800E1583A /* ContentView.swift */; };
 		E4E32A212B48C3EA00E1583A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4E32A202B48C3EA00E1583A /* Assets.xcassets */; };
 		E4E32A242B48C3EA00E1583A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4E32A232B48C3EA00E1583A /* Preview Assets.xcassets */; };
+		E4E32A2E2B48C93300E1583A /* Switcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E32A2D2B48C93300E1583A /* Switcher.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E40D42362B49F01000962073 /* Finder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Finder.swift; path = "VisionOS Prototypes/Finder.swift"; sourceTree = "<group>"; };
 		E4E32A152B48C3E800E1583A /* VisionOS Prototypes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "VisionOS Prototypes.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4E32A192B48C3E800E1583A /* RealityKitContent */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = RealityKitContent; sourceTree = "<group>"; };
 		E4E32A1C2B48C3E800E1583A /* VisionOS_PrototypesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisionOS_PrototypesApp.swift; sourceTree = "<group>"; };
@@ -22,6 +25,7 @@
 		E4E32A202B48C3EA00E1583A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E4E32A232B48C3EA00E1583A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E4E32A252B48C3EA00E1583A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E4E32A2D2B48C93300E1583A /* Switcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Switcher.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +43,7 @@
 		E4E32A0C2B48C3E800E1583A = {
 			isa = PBXGroup;
 			children = (
+				E40D42362B49F01000962073 /* Finder.swift */,
 				E4E32A172B48C3E800E1583A /* VisionOS Prototypes */,
 				E4E32A182B48C3E800E1583A /* Packages */,
 				E4E32A162B48C3E800E1583A /* Products */,
@@ -56,6 +61,7 @@
 		E4E32A172B48C3E800E1583A /* VisionOS Prototypes */ = {
 			isa = PBXGroup;
 			children = (
+				E4E32A2F2B48C95500E1583A /* Switcher */,
 				E4E32A1C2B48C3E800E1583A /* VisionOS_PrototypesApp.swift */,
 				E4E32A1E2B48C3E800E1583A /* ContentView.swift */,
 				E4E32A202B48C3EA00E1583A /* Assets.xcassets */,
@@ -79,6 +85,14 @@
 				E4E32A232B48C3EA00E1583A /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E4E32A2F2B48C95500E1583A /* Switcher */ = {
+			isa = PBXGroup;
+			children = (
+				E4E32A2D2B48C93300E1583A /* Switcher.swift */,
+			);
+			path = Switcher;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -156,6 +170,8 @@
 			files = (
 				E4E32A1F2B48C3E800E1583A /* ContentView.swift in Sources */,
 				E4E32A1D2B48C3E800E1583A /* VisionOS_PrototypesApp.swift in Sources */,
+				E4E32A2E2B48C93300E1583A /* Switcher.swift in Sources */,
+				E40D42372B49F01000962073 /* Finder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

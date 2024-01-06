@@ -11,7 +11,8 @@ import SwiftUI
 struct VisionOS_PrototypesApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+//            ContentView2()
+            Switcher()
         }.windowStyle(.volumetric)
     }
 }
