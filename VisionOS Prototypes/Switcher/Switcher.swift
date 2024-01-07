@@ -8,18 +8,20 @@
 import SwiftUI
 import RealityKit
 
-struct Switcher: View {
-    
-    private let dotScale: SIMD3<Float> = [1, 1, 1]
+struct Switcher: View 
+{
+    private let dotScale: SIMD3<Float> = [1.0, 1.0, 1.0]
     private let dotTranslation: SIMD3<Float> = [0.0, 0.0, -0.446]
-    private let dotYOffset: Double = 80
-    
-    private let flatDotYOffset: Double = 40
+    private let dotYOffset: Double = 80.0
+    private let angleOffset: Double = 10.0
+    private let animDuration: Double = 1.0
+    private let flatDotYOffset: Double = 40.0
     
     @State private var isPressed: Bool = false;
     @State private var isFirstSelected: Bool = true;
     @State private var currentYDotOffset: Double = 0.0
     @State private var currentFlatDotYOffset: Double = 0.0
+    @State private var currentAndleOffset: Double = 0.0
     
     var body: some View
     {
@@ -29,20 +31,29 @@ struct Switcher: View {
             {
                 ZStack
                 {
-                    
 //                    Capsule()
 //                        .frame(width: 48, height: 128)
 //                        .opacity(0.1)
                     
                     Circle()
+                        .foregroundColor(.black)
+                        .frame(width: 48, height: 48)
+                        .offset(y: -currentFlatDotYOffset)
+                        .animation(.bouncy(duration: animDuration), value: currentFlatDotYOffset)
+                        .opacity(0.5)
+                        .blur(radius: 16)
+                        .blendMode(.multiply)
+                    
+                    Circle()
                         .frame(width: 48, height: 48)
                         .offset(y: currentFlatDotYOffset)
-                        .animation(.bouncy(duration: 0.5), value: currentFlatDotYOffset)
+                        .animation(.bouncy(duration: animDuration), value: currentFlatDotYOffset)
                         .opacity(0.2)
                     
                     RealityView
                     {
                         content in
+                        
                         async let dot = ModelEntity(named: "sphere_1m")
                         
                         if let dot = try? await dot
@@ -53,28 +64,26 @@ struct Switcher: View {
                         }
                     }
                     .padding3D(.bottom, currentYDotOffset)
-                    .animation(.bouncy(duration: 0.5), value: currentYDotOffset)    
+                    .animation(.bouncy(duration: animDuration), value: currentYDotOffset)
                 
                 }
-                
-                
-                
-                
                 .frame(width: 48)
-//                .background(Color.green)
                 .padding(.leading, 48.0)
 
                 VStack(alignment: .leading, spacing: 0)
                 {
                     Spacer()
+                    
                     Text("Vision Pro")
+                    
                     Spacer()
                         .frame(height: 42)
+                    
                     Text("Meta Quest")
+                    
                     Spacer()
                 }
                 .font(.custom("SF Pro Display", size: 32))
-//                .background(Color.black)
                 .padding(.leading, 24.0)
 
                 Spacer()
@@ -83,10 +92,8 @@ struct Switcher: View {
         }
         
         .frame(width: 480, height: 224)
-//        .background(Color.red)
         .glassBackgroundEffect()
         .cornerRadius(48)
-        
         .gesture(DragGesture(minimumDistance: 0)
             .onChanged { _ in
                 
@@ -98,14 +105,15 @@ struct Switcher: View {
                     currentYDotOffset = isFirstSelected ? dotYOffset : -dotYOffset
                     
                     currentFlatDotYOffset = isFirstSelected ? flatDotYOffset : -flatDotYOffset
-                    print("\(currentYDotOffset)")
-                    print("Down")
                     
+                    currentAndleOffset = isFirstSelected ? angleOffset : -angleOffset
+                    print("Down")
                 }
             }
             .onEnded { _ in
                 if (isPressed)
                 {
+                    currentAndleOffset = 0.0
                     isPressed = false
                     print("Up")
                 }
@@ -116,6 +124,9 @@ struct Switcher: View {
             currentYDotOffset = dotYOffset
             currentFlatDotYOffset = flatDotYOffset
         }
+        .offset(z: 24)
+        .rotation3DEffect(.degrees(currentAndleOffset), axis: (1.0, 0.0, 0.0), anchor: UnitPoint3D(x: 0.0, y: 0.5, z: 0.0))
+        .animation(.bouncy(duration: animDuration), value: currentAndleOffset)
     }
 }
 
