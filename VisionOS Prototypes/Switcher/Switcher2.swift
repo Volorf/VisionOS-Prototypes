@@ -8,14 +8,19 @@
 import SwiftUI
 import RealityKit
 
-struct Switcher: View 
+struct Switcher2: View
 {
-    private let dotScale: SIMD3<Float> = [1.0, 1.0, 1.0]
-    private let dotTranslation: SIMD3<Float> = [0.0, 0.0, -0.446]
-    private let dotYOffset: Double = 80.0
+//    private let dotScale: SIMD3<Float> = [1.0, 1.0, 1.0]
+    private let dotScale: SIMD3<Float> = [0.75, 0.75, 0.75]
+    private let dotTranslation: SIMD3<Float> = [0.0, 0.0, -0.4525]
+//    private let dotTranslation: SIMD3<Float> = [0.0, 0.0, -0.175]
+    private let dotYOffset: Double = 72.0
     private let angleOffset: Double = 10.0
     private let animDuration: Double = 1.0
     private let flatDotYOffset: Double = 40.0
+    
+    private let highOpacity: Double = 0.8
+    private let lowOpacity: Double = 0.8
     
     @State private var isPressed: Bool = false;
     @State private var isFirstSelected: Bool = true;
@@ -31,9 +36,9 @@ struct Switcher: View
             {
                 ZStack
                 {
-//                    Capsule()
-//                        .frame(width: 48, height: 128)
-//                        .opacity(0.1)
+                    Capsule()
+                        .frame(width: 48, height: 128)
+                        .opacity(0.1)
                     
                     Circle()
                         .foregroundColor(.black)
@@ -44,11 +49,12 @@ struct Switcher: View
                         .blur(radius: 16)
                         .blendMode(.multiply)
                     
-                    Circle()
-                        .frame(width: 48, height: 48)
-                        .offset(y: currentFlatDotYOffset)
-                        .animation(.bouncy(duration: animDuration), value: currentFlatDotYOffset)
-                        .opacity(0.2)
+                    
+//                    Circle()
+//                        .frame(width: 48, height: 48)
+//                        .offset(y: currentFlatDotYOffset)
+//                        .animation(.bouncy(duration: animDuration), value: currentFlatDotYOffset)
+//                        .opacity(0.2)
                     
                     RealityView
                     {
@@ -74,16 +80,17 @@ struct Switcher: View
                 {
                     Spacer()
                     
-                    Text("Vision Pro")
+                    Text("Vision Pro").opacity(!isFirstSelected ? lowOpacity : highOpacity)
                     
                     Spacer()
                         .frame(height: 42)
                     
-                    Text("Meta Quest")
+                    Text("Meta Quest").opacity(isFirstSelected ? lowOpacity : highOpacity)
                     
                     Spacer()
                 }
-                .font(.custom("SF Pro Display", size: 32))
+                .font(.custom("Helvetica", size: 32))
+                .fontWeight(.regular)
                 .padding(.leading, 24.0)
 
                 Spacer()
@@ -93,6 +100,7 @@ struct Switcher: View
         
         .frame(width: 480, height: 224)
         .glassBackgroundEffect()
+        .background(isPressed ? .white.opacity(0.5) : .clear)
         .cornerRadius(48)
         .gesture(DragGesture(minimumDistance: 0)
             .onChanged { _ in
@@ -131,5 +139,5 @@ struct Switcher: View
 }
 
 #Preview {
-    Switcher()
+    Switcher2()
 }
