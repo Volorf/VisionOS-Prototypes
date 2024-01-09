@@ -10,6 +10,7 @@
 		E40D42392B4A2FA000962073 /* sphere_1m.usdc in Resources */ = {isa = PBXBuildFile; fileRef = E40D42382B4A2FA000962073 /* sphere_1m.usdc */; };
 		E42973692B4B9CBE0062B3FA /* Switcher2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42973682B4B9CBE0062B3FA /* Switcher2.swift */; };
 		E429736B2B4CAD5B0062B3FA /* Switcher3.swift in Sources */ = {isa = PBXBuildFile; fileRef = E429736A2B4CAD5B0062B3FA /* Switcher3.swift */; };
+		E429736D2B4CB3DC0062B3FA /* CylindricButton.usdc in Resources */ = {isa = PBXBuildFile; fileRef = E429736C2B4CB3DC0062B3FA /* CylindricButton.usdc */; };
 		E4E32A1B2B48C3E800E1583A /* RealityKitContent in Frameworks */ = {isa = PBXBuildFile; productRef = E4E32A1A2B48C3E800E1583A /* RealityKitContent */; };
 		E4E32A1D2B48C3E800E1583A /* VisionOS_PrototypesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E32A1C2B48C3E800E1583A /* VisionOS_PrototypesApp.swift */; };
 		E4E32A212B48C3EA00E1583A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4E32A202B48C3EA00E1583A /* Assets.xcassets */; };
@@ -21,6 +22,7 @@
 		E40D42382B4A2FA000962073 /* sphere_1m.usdc */ = {isa = PBXFileReference; lastKnownFileType = file; path = sphere_1m.usdc; sourceTree = "<group>"; };
 		E42973682B4B9CBE0062B3FA /* Switcher2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Switcher2.swift; sourceTree = "<group>"; };
 		E429736A2B4CAD5B0062B3FA /* Switcher3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Switcher3.swift; sourceTree = "<group>"; };
+		E429736C2B4CB3DC0062B3FA /* CylindricButton.usdc */ = {isa = PBXFileReference; lastKnownFileType = file; path = CylindricButton.usdc; sourceTree = "<group>"; };
 		E4E32A152B48C3E800E1583A /* VisionOS Prototypes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "VisionOS Prototypes.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4E32A192B48C3E800E1583A /* RealityKitContent */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = RealityKitContent; sourceTree = "<group>"; };
 		E4E32A1C2B48C3E800E1583A /* VisionOS_PrototypesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisionOS_PrototypesApp.swift; sourceTree = "<group>"; };
@@ -90,6 +92,7 @@
 		E4E32A2F2B48C95500E1583A /* Switcher */ = {
 			isa = PBXGroup;
 			children = (
+				E429736C2B4CB3DC0062B3FA /* CylindricButton.usdc */,
 				E40D42382B4A2FA000962073 /* sphere_1m.usdc */,
 				E4E32A2D2B48C93300E1583A /* Switcher1.swift */,
 				E42973682B4B9CBE0062B3FA /* Switcher2.swift */,
@@ -161,6 +164,7 @@
 			files = (
 				E4E32A242B48C3EA00E1583A /* Preview Assets.xcassets in Resources */,
 				E4E32A212B48C3EA00E1583A /* Assets.xcassets in Resources */,
+				E429736D2B4CB3DC0062B3FA /* CylindricButton.usdc in Resources */,
 				E40D42392B4A2FA000962073 /* sphere_1m.usdc in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

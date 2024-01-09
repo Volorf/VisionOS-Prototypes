@@ -11,15 +11,15 @@ import RealityKit
 struct Switcher3: View
 {
 //    private let dotScale: SIMD3<Float> = [1.0, 1.0, 1.0]
-    private let dotScale: SIMD3<Float> = [0.75, 0.75, 0.75]
-    private let dotTranslation: SIMD3<Float> = [0.0, 0.0, -0.4525]
-//    private let dotTranslation: SIMD3<Float> = [0.0, 0.0, -0.175]
+    private let dotScale: SIMD3<Float> = [0.5, 0.5, 0.5]
+    private let dotTranslation: SIMD3<Float> = [0.0, 0.0, -0.4695]
+//    private let dotTranslation: SIMD3<Float> = [0.0, 0.0, -0.2]
     private let dotYOffset: Double = 72.0
     private let angleOffset: Double = 10.0
     private let animDuration: Double = 1.0
     private let flatDotYOffset: Double = 40.0
     
-    private let highOpacity: Double = 0.8
+    private let highOpacity: Double = 1.0
     private let lowOpacity: Double = 0.2
     
     @State private var isPressed: Bool = false;
@@ -27,6 +27,9 @@ struct Switcher3: View
     @State private var currentYDotOffset: Double = 0.0
     @State private var currentFlatDotYOffset: Double = 0.0
     @State private var currentAndleOffset: Double = 0.0
+    
+    private var mat1: SimpleMaterial = SimpleMaterial(color: .white, roughness: 0.0, isMetallic: true)
+    private var mat2: SimpleMaterial = SimpleMaterial(color: .gray, roughness: 1.0, isMetallic: false)
     
     var body: some View
     {
@@ -42,7 +45,7 @@ struct Switcher3: View
                     
                     Circle()
                         .foregroundColor(.black)
-                        .frame(width: 48, height: 48)
+                        .frame(width: 32, height: 32)
                         .offset(y: -currentFlatDotYOffset)
                         .animation(.bouncy(duration: animDuration), value: currentFlatDotYOffset)
                         .opacity(0.5)
@@ -60,18 +63,38 @@ struct Switcher3: View
                     {
                         content in
                         
-                        async let dot = ModelEntity(named: "sphere_1m")
+                        async let dot = ModelEntity(named: "CylindricButton")
                         
                         if let dot = try? await dot
                         {
                             dot.transform.scale = dotScale
                             dot.transform.translation = dotTranslation
+//                            if var material = dot.model?.materials.first as? SimpleMaterial
+//                            {
+//                                material.roughness = isFirstSelected ? 0.1 : 1.0
+//                                dot.model?.materials = [material]
+//                            }
                             content.add(dot)
                         }
                     }
-                    .opacity(isFirstSelected ? highOpacity : lowOpacity)
+                    update : { content in
+                        print("heyyyyyy")
+                        let c = content.entities[0] as! ModelEntity
+                        
+//                        withAnimation
+//                        {
+//                            c.model?.materials = [isFirstSelected ? mat1 : mat2]
+//                        }
+                        
+                        
+                        
+                        content.add(c)
+                        
+                    }
+//                    .opacity(isFirstSelected ? highOpacity : lowOpacity)
                     .padding3D(.bottom, currentYDotOffset)
                     .animation(.bouncy(duration: animDuration), value: currentYDotOffset)
+                    
                 
                 }
                 .frame(width: 48)
@@ -142,3 +165,5 @@ struct Switcher3: View
 #Preview {
     Switcher3()
 }
+
+
