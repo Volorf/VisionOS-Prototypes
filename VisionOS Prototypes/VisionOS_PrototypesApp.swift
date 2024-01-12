@@ -8,12 +8,17 @@
 import SwiftUI
 
 @main
-struct VisionOS_PrototypesApp: App {
-    var body: some Scene {
-        WindowGroup {
-//            Switcher1()
+struct VisionOS_PrototypesApp: App 
+{
+    var body: some Scene 
+    {
+        WindowGroup 
+        {
+            Switcher1()
 //            Switcher2()
-            Switcher3()
-        }.windowStyle(.volumetric)
+//            Switcher3()
+//            Keypad()
+        }
+        .windowStyle(.volumetric)
     }
 }

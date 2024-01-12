@@ -11,6 +11,10 @@
 		E42973692B4B9CBE0062B3FA /* Switcher2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42973682B4B9CBE0062B3FA /* Switcher2.swift */; };
 		E429736B2B4CAD5B0062B3FA /* Switcher3.swift in Sources */ = {isa = PBXBuildFile; fileRef = E429736A2B4CAD5B0062B3FA /* Switcher3.swift */; };
 		E429736D2B4CB3DC0062B3FA /* CylindricButton.usdc in Resources */ = {isa = PBXBuildFile; fileRef = E429736C2B4CB3DC0062B3FA /* CylindricButton.usdc */; };
+		E4D37C742B51DC3E004BFD8A /* FingerPrint.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D37C732B51DC3E004BFD8A /* FingerPrint.swift */; };
+		E4D37C762B51DCDD004BFD8A /* IBMPlexMono-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E4D37C752B51DCDD004BFD8A /* IBMPlexMono-Medium.ttf */; };
+		E4D37C782B51DE1D004BFD8A /* KeypadButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D37C772B51DE1D004BFD8A /* KeypadButton.swift */; };
+		E4D37C7A2B51DF4D004BFD8A /* Keypad.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D37C792B51DF4D004BFD8A /* Keypad.swift */; };
 		E4E32A1B2B48C3E800E1583A /* RealityKitContent in Frameworks */ = {isa = PBXBuildFile; productRef = E4E32A1A2B48C3E800E1583A /* RealityKitContent */; };
 		E4E32A1D2B48C3E800E1583A /* VisionOS_PrototypesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E32A1C2B48C3E800E1583A /* VisionOS_PrototypesApp.swift */; };
 		E4E32A212B48C3EA00E1583A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4E32A202B48C3EA00E1583A /* Assets.xcassets */; };
@@ -23,6 +27,10 @@
 		E42973682B4B9CBE0062B3FA /* Switcher2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Switcher2.swift; sourceTree = "<group>"; };
 		E429736A2B4CAD5B0062B3FA /* Switcher3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Switcher3.swift; sourceTree = "<group>"; };
 		E429736C2B4CB3DC0062B3FA /* CylindricButton.usdc */ = {isa = PBXFileReference; lastKnownFileType = file; path = CylindricButton.usdc; sourceTree = "<group>"; };
+		E4D37C732B51DC3E004BFD8A /* FingerPrint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FingerPrint.swift; sourceTree = "<group>"; };
+		E4D37C752B51DCDD004BFD8A /* IBMPlexMono-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "IBMPlexMono-Medium.ttf"; sourceTree = "<group>"; };
+		E4D37C772B51DE1D004BFD8A /* KeypadButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeypadButton.swift; sourceTree = "<group>"; };
+		E4D37C792B51DF4D004BFD8A /* Keypad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keypad.swift; sourceTree = "<group>"; };
 		E4E32A152B48C3E800E1583A /* VisionOS Prototypes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "VisionOS Prototypes.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4E32A192B48C3E800E1583A /* RealityKitContent */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = RealityKitContent; sourceTree = "<group>"; };
 		E4E32A1C2B48C3E800E1583A /* VisionOS_PrototypesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisionOS_PrototypesApp.swift; sourceTree = "<group>"; };
@@ -44,6 +52,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E4D37C722B51DC08004BFD8A /* Keypad that remembers */ = {
+			isa = PBXGroup;
+			children = (
+				E4D37C732B51DC3E004BFD8A /* FingerPrint.swift */,
+				E4D37C772B51DE1D004BFD8A /* KeypadButton.swift */,
+				E4D37C792B51DF4D004BFD8A /* Keypad.swift */,
+			);
+			path = "Keypad that remembers";
+			sourceTree = "<group>";
+		};
 		E4E32A0C2B48C3E800E1583A = {
 			isa = PBXGroup;
 			children = (
@@ -64,6 +82,8 @@
 		E4E32A172B48C3E800E1583A /* VisionOS Prototypes */ = {
 			isa = PBXGroup;
 			children = (
+				E4D37C752B51DCDD004BFD8A /* IBMPlexMono-Medium.ttf */,
+				E4D37C722B51DC08004BFD8A /* Keypad that remembers */,
 				E4E32A2F2B48C95500E1583A /* Switcher */,
 				E4E32A1C2B48C3E800E1583A /* VisionOS_PrototypesApp.swift */,
 				E4E32A202B48C3EA00E1583A /* Assets.xcassets */,
@@ -162,6 +182,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4D37C762B51DCDD004BFD8A /* IBMPlexMono-Medium.ttf in Resources */,
 				E4E32A242B48C3EA00E1583A /* Preview Assets.xcassets in Resources */,
 				E4E32A212B48C3EA00E1583A /* Assets.xcassets in Resources */,
 				E429736D2B4CB3DC0062B3FA /* CylindricButton.usdc in Resources */,
@@ -177,8 +198,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				E4E32A1D2B48C3E800E1583A /* VisionOS_PrototypesApp.swift in Sources */,
+				E4D37C782B51DE1D004BFD8A /* KeypadButton.swift in Sources */,
 				E4E32A2E2B48C93300E1583A /* Switcher1.swift in Sources */,
 				E429736B2B4CAD5B0062B3FA /* Switcher3.swift in Sources */,
+				E4D37C7A2B51DF4D004BFD8A /* Keypad.swift in Sources */,
+				E4D37C742B51DC3E004BFD8A /* FingerPrint.swift in Sources */,
 				E42973692B4B9CBE0062B3FA /* Switcher2.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
