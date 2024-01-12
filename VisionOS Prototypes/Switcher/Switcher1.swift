@@ -77,12 +77,12 @@ struct Switcher1: View
                 {
                     Spacer()
                     
-                    Text("Vision Pro")
+                    Text("Left")
                     
                     Spacer()
                         .frame(height: 42)
                     
-                    Text("Meta Quest")
+                    Text("Right")
                     
                     Spacer()
                 }
