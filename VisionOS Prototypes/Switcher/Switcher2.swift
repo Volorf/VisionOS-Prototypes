@@ -20,7 +20,7 @@ struct Switcher2: View
     private let flatDotYOffset: Double = 40.0
     
     private let highOpacity: Double = 0.8
-    private let lowOpacity: Double = 0.8
+    private let lowOpacity: Double = 0.2
     
     @State private var isPressed: Bool = false;
     @State private var isFirstSelected: Bool = true;
@@ -80,17 +80,19 @@ struct Switcher2: View
                 {
                     Spacer()
                     
-                    Text("Vision Pro").opacity(!isFirstSelected ? lowOpacity : highOpacity)
+                    Text("Fork").opacity(!isFirstSelected ? lowOpacity : highOpacity)
                     
                     Spacer()
                         .frame(height: 42)
                     
-                    Text("Meta Quest").opacity(isFirstSelected ? lowOpacity : highOpacity)
+                    Text("Spoon").opacity(isFirstSelected ? lowOpacity : highOpacity)
                     
                     Spacer()
                 }
-                .font(.custom("Helvetica", size: 32))
+                .font(.system(size: 32))
                 .fontWeight(.regular)
+                .textCase(/*@START_MENU_TOKEN@*/.uppercase/*@END_MENU_TOKEN@*/)
+                .kerning(4.0)
                 .padding(.leading, 24.0)
 
                 Spacer()
@@ -98,7 +100,7 @@ struct Switcher2: View
             
         }
         
-        .frame(width: 480, height: 224)
+        .frame(width: 320, height: 224)
         .glassBackgroundEffect()
         .background(isPressed ? .white.opacity(0.5) : .clear)
         .cornerRadius(48)

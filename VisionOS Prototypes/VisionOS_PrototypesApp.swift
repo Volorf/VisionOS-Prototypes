@@ -14,8 +14,8 @@ struct VisionOS_PrototypesApp: App
     {
         WindowGroup 
         {
-            Switcher1()
-//            Switcher2()
+//            Switcher1()
+            Switcher2()
 //            Switcher3()
 //            Keypad()
         }
