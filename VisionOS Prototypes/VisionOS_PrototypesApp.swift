@@ -15,9 +15,9 @@ struct VisionOS_PrototypesApp: App
         WindowGroup 
         {
 //            Switcher1()
-            Switcher2()
+//            Switcher2()
 //            Switcher3()
-//            Keypad()
+            Keypad()
         }
         .windowStyle(.volumetric)
     }

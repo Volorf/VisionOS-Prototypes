@@ -84,7 +84,7 @@
 			children = (
 				E4D37C752B51DCDD004BFD8A /* IBMPlexMono-Medium.ttf */,
 				E4D37C722B51DC08004BFD8A /* Keypad that remembers */,
-				E4E32A2F2B48C95500E1583A /* Switcher */,
+				E4E32A2F2B48C95500E1583A /* Switchers */,
 				E4E32A1C2B48C3E800E1583A /* VisionOS_PrototypesApp.swift */,
 				E4E32A202B48C3EA00E1583A /* Assets.xcassets */,
 				E4E32A252B48C3EA00E1583A /* Info.plist */,
@@ -109,7 +109,7 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		E4E32A2F2B48C95500E1583A /* Switcher */ = {
+		E4E32A2F2B48C95500E1583A /* Switchers */ = {
 			isa = PBXGroup;
 			children = (
 				E429736C2B4CB3DC0062B3FA /* CylindricButton.usdc */,
@@ -118,7 +118,7 @@
 				E42973682B4B9CBE0062B3FA /* Switcher2.swift */,
 				E429736A2B4CAD5B0062B3FA /* Switcher3.swift */,
 			);
-			path = Switcher;
+			path = Switchers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
