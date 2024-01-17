@@ -16,8 +16,8 @@ struct VisionOS_PrototypesApp: App
         {
 //            Switcher1()
 //            Switcher2()
-//            Switcher3()
-            Keypad()
+            Switcher3()
+//            Keypad()
         }
         .windowStyle(.volumetric)
     }
