@@ -113,7 +113,7 @@ struct Switcher3: View
                     
                     Spacer()
                 }
-                .font(.custom("Helvetica", size: 32))
+                .font(.system(size: 32))
                 .fontWeight(.regular)
                 .padding(.leading, 24.0)
 
