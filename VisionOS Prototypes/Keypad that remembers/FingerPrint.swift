@@ -32,7 +32,7 @@ struct FingerPrint: View
                 .offset(y: 16)
         }
 //        .blendMode(.overlay)
-        .frame(width: 128, height: 128)
+        .frame(width: 96, height: 96)
         .cornerRadius(8)
         .position(x: position.x, y: position.y)
         .onAppear()

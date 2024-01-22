@@ -8,6 +8,7 @@ struct KeypadButton: View
     let name: String
     let isActive: Bool
     let isDisabled: Bool
+    
     @State private var isPressed: Bool = false
     @State private var fingerPrints: [Coords] = []
     @State private var isHovering: Bool = false
@@ -32,39 +33,18 @@ struct KeypadButton: View
                     FingerPrint(position: fingerPrint)
                 }
             }
-            
             .frame(width: 64, height: 64)
-            
             .background(isActive ? Color("Accent") : isDisabled ? .white.opacity(0.025) : .white.opacity(0.1))
             .cornerRadius(8)
             .glassBackgroundEffect()
-            
             .scaleEffect(isPressed ? 0.9 : 1)
             .animation(.spring(), value: isPressed)
             .animation(.easeInOut, value: isActive)
             .animation(.easeInOut, value: isDisabled)
-            
-            
         }
-        
-//        .onContinuousHover
-//        {
-//            phase in
-//            switch phase
-//            {
-//            case .active:
-//                print("hover started: " + name)
-//                isHovering = true
-//            case .ended:
-//                isHovering = false
-//                print("hover ended: " + name)
-//            }
-//        }
-        
         .simultaneousGesture(DragGesture(minimumDistance: 0)
-                             
-            .onChanged
-                             {
+        .onChanged
+        {
             touchData in
             if (!isPressed)
             {
@@ -74,8 +54,8 @@ struct KeypadButton: View
                 fingerPrints.append(Coords(x: touchData.location.x, y: touchData.location.y))
             }
         }
-            .onEnded
-                             {
+        .onEnded
+        {
             _ in
             if (isPressed)
             {
@@ -84,8 +64,6 @@ struct KeypadButton: View
                 action(name)
             }
         })
-        
-        
     }
 }
 
