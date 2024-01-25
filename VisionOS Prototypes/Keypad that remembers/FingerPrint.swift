@@ -38,7 +38,7 @@ struct FingerPrint: View
         .onAppear()
         {
             angleOffset = Double.random(in: -20...20)
-            opacityOffset = Double.random(in: 0.2...0.6)
+            opacityOffset = Double.random(in: 0.4...0.8)
             imageName = "Finger Print \(Int.random(in: 1..<5))"
 //            imageName = "Finger Print"
         }
