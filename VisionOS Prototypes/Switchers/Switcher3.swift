@@ -11,9 +11,10 @@ import RealityKit
 struct Switcher3: View
 {
 //    private let dotScale: SIMD3<Float> = [1.0, 1.0, 1.0]
+//    private let dotTranslation: SIMD3<Float> = [0.0, 0.0, -0.2]
     private let dotScale: SIMD3<Float> = [0.5, 0.5, 0.5]
     private let dotTranslation: SIMD3<Float> = [0.0, 0.0, -0.4695]
-//    private let dotTranslation: SIMD3<Float> = [0.0, 0.0, -0.2]
+
     private let dotYOffset: Double = 72.0
     private let angleOffset: Double = 10.0
     private let animDuration: Double = 1.0
@@ -51,7 +52,6 @@ struct Switcher3: View
                         .opacity(0.5)
                         .blur(radius: 16)
                         .blendMode(.multiply)
-                    
                     
 //                    Circle()
 //                        .frame(width: 48, height: 48)

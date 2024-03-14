@@ -10,10 +10,13 @@ import RealityKit
 
 struct Switcher1: View 
 {
-//    private let dotScale: SIMD3<Float> = [1.0, 1.0, 1.0]
-    private let dotScale: SIMD3<Float> = [0.75, 0.75, 0.75]
-    private let dotTranslation: SIMD3<Float> = [0.0, 0.0, -0.4525]
-//    private let dotTranslation: SIMD3<Float> = [0.0, 0.0, -0.175]
+//    Strange bug. You need to have different settings to make it look similar both in the simulator and in the preview
+    
+    private let dotScale: SIMD3<Float> = [1.0, 1.0, 1.0] // Preview scale
+    private let dotTranslation: SIMD3<Float> = [0.0, 0.0, -0.175] // Preview offset
+//    private let dotScale: SIMD3<Float> = [0.75, 0.75, 0.75] // Simulator scale
+//    private let dotTranslation: SIMD3<Float> = [0.0, 0.0, -0.4525] // Simulator offset
+
     private let dotYOffset: Double = 80.0
     private let angleOffset: Double = 10.0
     private let animDuration: Double = 1.0

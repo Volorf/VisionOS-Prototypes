@@ -127,7 +127,6 @@ struct Keypad: View
                             text.removeLast()
                             processTextInput(sign: "")
                         }
-                        
                     }
                     KeypadButton(name: "0", isActive: false, isDisabled: isFull)
                     {

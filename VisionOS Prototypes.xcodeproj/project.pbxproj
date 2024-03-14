@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E40D42392B4A2FA000962073 /* sphere_1m.usdc in Resources */ = {isa = PBXBuildFile; fileRef = E40D42382B4A2FA000962073 /* sphere_1m.usdc */; };
+		E41ACA2E2BA37A540067A885 /* Stepper1.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41ACA2D2BA37A540067A885 /* Stepper1.swift */; };
 		E42973692B4B9CBE0062B3FA /* Switcher2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42973682B4B9CBE0062B3FA /* Switcher2.swift */; };
 		E429736B2B4CAD5B0062B3FA /* Switcher3.swift in Sources */ = {isa = PBXBuildFile; fileRef = E429736A2B4CAD5B0062B3FA /* Switcher3.swift */; };
 		E429736D2B4CB3DC0062B3FA /* CylindricButton.usdc in Resources */ = {isa = PBXBuildFile; fileRef = E429736C2B4CB3DC0062B3FA /* CylindricButton.usdc */; };
@@ -24,6 +25,7 @@
 
 /* Begin PBXFileReference section */
 		E40D42382B4A2FA000962073 /* sphere_1m.usdc */ = {isa = PBXFileReference; lastKnownFileType = file; path = sphere_1m.usdc; sourceTree = "<group>"; };
+		E41ACA2D2BA37A540067A885 /* Stepper1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stepper1.swift; sourceTree = "<group>"; };
 		E42973682B4B9CBE0062B3FA /* Switcher2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Switcher2.swift; sourceTree = "<group>"; };
 		E429736A2B4CAD5B0062B3FA /* Switcher3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Switcher3.swift; sourceTree = "<group>"; };
 		E429736C2B4CB3DC0062B3FA /* CylindricButton.usdc */ = {isa = PBXFileReference; lastKnownFileType = file; path = CylindricButton.usdc; sourceTree = "<group>"; };
@@ -52,6 +54,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E41ACA2C2BA37A170067A885 /* Steppers */ = {
+			isa = PBXGroup;
+			children = (
+				E41ACA2D2BA37A540067A885 /* Stepper1.swift */,
+			);
+			path = Steppers;
+			sourceTree = "<group>";
+		};
 		E4D37C722B51DC08004BFD8A /* Keypad that remembers */ = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +95,7 @@
 				E4D37C752B51DCDD004BFD8A /* IBMPlexMono-Medium.ttf */,
 				E4D37C722B51DC08004BFD8A /* Keypad that remembers */,
 				E4E32A2F2B48C95500E1583A /* Switchers */,
+				E41ACA2C2BA37A170067A885 /* Steppers */,
 				E4E32A1C2B48C3E800E1583A /* VisionOS_PrototypesApp.swift */,
 				E4E32A202B48C3EA00E1583A /* Assets.xcassets */,
 				E4E32A252B48C3EA00E1583A /* Info.plist */,
@@ -199,6 +210,7 @@
 			files = (
 				E4E32A1D2B48C3E800E1583A /* VisionOS_PrototypesApp.swift in Sources */,
 				E4D37C782B51DE1D004BFD8A /* KeypadButton.swift in Sources */,
+				E41ACA2E2BA37A540067A885 /* Stepper1.swift in Sources */,
 				E4E32A2E2B48C93300E1583A /* Switcher1.swift in Sources */,
 				E429736B2B4CAD5B0062B3FA /* Switcher3.swift in Sources */,
 				E4D37C7A2B51DF4D004BFD8A /* Keypad.swift in Sources */,

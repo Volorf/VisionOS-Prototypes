@@ -21,7 +21,6 @@ struct KeypadButton: View
         {
             ZStack
             {
-                
                 Text(name)
                     .frame(width: 64)
                 
