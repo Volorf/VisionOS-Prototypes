@@ -119,7 +119,8 @@ struct Stepper1: View
                     
                 }
             }
-            .onEnded { _ in
+            .onEnded 
+            {   _ in
                 if (isPressed)
                 {
                     isPressed = false

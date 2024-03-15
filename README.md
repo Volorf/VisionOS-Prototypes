@@ -2,10 +2,19 @@
 
 A collection of interactive prototypes for VisionOS made with SwiftUI and RealityKit.
 
+- [Stepper I](#stepper-i)
 - [Keypad That Remembers](#keypad-that-remembers)
 - [Switcher III](#switcher-iii)
 - [Switcher II](#switcher-ii)
 - [Switcher I](#switcher-i)
+
+
+## Stepper I
+
+<img src="Gifs/stepper_i.gif" width="800px">
+
+[Learn more](https://twitter.com/Volorf/status/1768644453881766322) •
+[Source](https://github.com/Volorf/VisionOS-Prototypes/blob/main/VisionOS%20Prototypes/Steppers/Stepper1.swift)
 
 ## Keypad That Remembers
 
